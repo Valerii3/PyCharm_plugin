@@ -28,9 +28,9 @@ class DemoPanelFactory : ToolWindowFactory {
         // Create a simple UI for the tool window
         val panel = JPanel(BorderLayout())
         textArea = JTextArea("Please, select any method or function you want to understand more deeply.").apply {
-            lineWrap = true            // Enable line wrapping
-            wrapStyleWord = true       // Enable word wrapping
-            isEditable = false         // Make the text area non-editable
+            lineWrap = true
+            wrapStyleWord = true
+            isEditable = false
             margin = Insets(5, 5, 5, 5) // Optionally add some margin
         }
         panel.add(JScrollPane(textArea), BorderLayout.CENTER)

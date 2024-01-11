@@ -3,7 +3,6 @@ package com.valerii.ov.pycharm_plugin.dev
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
-import com.intellij.openapi.editor.Editor
 import com.intellij.psi.util.PsiTreeUtil
 import com.jetbrains.python.psi.PyFunction
 
@@ -24,11 +23,11 @@ class ExplainMethodAction : AnAction() {
 
         if (functionElement != null) {
             selectedFunctionCode = functionElement.text
-            val localFunctionCode = selectedFunctionCode  // Local variable to hold the value
+            val localFunctionCode = selectedFunctionCode
 
             // Ensure localFunctionCode is not null before using it
             if (localFunctionCode != null) {
-                sendCodeToOpenAI(localFunctionCode, "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")
+                sendCodeToOpenAI(localFunctionCode, "YOUR OPENAI API KEY HERE")
             }
         }
     }
